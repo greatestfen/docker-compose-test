@@ -1,0 +1,11 @@
+version: '3'
+services:
+  appbuilder: 
+    build: .
+
+  appexec:
+    image: gazgeek/springboot-helloworld
+    links:
+      - appbuilder
+    volumes:
+      - /:/home/boxfuse/target/

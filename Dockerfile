@@ -1,8 +1,8 @@
 FROM alpine:latest
 RUN apk add --update-cache \
     openjdk8 \
-    git && \
-    rm -rf /var/cache/apk/*
+    git \
+    && rm -rf /var/cache/apk/*
 
 WORKDIR /tmp
 
